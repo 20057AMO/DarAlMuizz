@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <title>DAR AL-MUIZZ | دار المعز — Boutique Guesthouse West Bank, Luxor</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Amiri & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FAF8F3',
+                            100: '#F7F3EB', // Warm Cream Paper
+                            200: '#EFE8DA', // Sand Beige Cards
+                            300: '#E2D6C3',
+                        },
+                        umber: {
+                            700: '#5C3B28',
+                            800: '#3B2416', // Deep Burnt Umber
+                            900: '#26160C', // Espresso
+                        },
+                        copper: {
+                            400: '#C88A55',
+                            500: '#B87344', // Antique Copper
+                            600: '#9E5E34', // Deep Metallic Copper
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', '"Amiri"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', '"Cairo"', 'sans-serif'],
+                        arabic: ['"Amiri"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Heritage Styling & Zero Horizontal Overflow */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            background-color: #F7F3EB;
+            color: #3B2416;
+        }
+
+        body {
+            background-image: radial-gradient(rgba(59, 36, 22, 0.04) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        /* Architectural Pointed Islamic Arch Frame */
+        .islamic-arch-frame {
+            border-top-left-radius: 50% 34%;
+            border-top-right-radius: 50% 34%;
+            border-bottom-left-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+        }
+
+        /* Crisp Copper & Umber Borders */
+        .border-heritage {
+            border: 1px solid rgba(59, 36, 22, 0.14);
+        }
+        .border-heritage-b {
+            border-bottom: 1px solid rgba(59, 36, 22, 0.12);
+        }
+        .border-heritage-t {
+            border-top: 1px solid rgba(59, 36, 22, 0.12);
+        }
+
+        /* Brushed Metallic Copper CTA Gradient */
+        .copper-btn {
+            background: linear-gradient(135deg, #C88A55 0%, #B87344 50%, #9E5E34 100%);
+        }
+
+        /* Smooth Image Hover Zoom */
+        .img-zoom {
+            transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .group:hover .img-zoom {
+            transform: scale(1.04);
+        }
+
+        /* Arabic RTL Typography Adjustments */
+        html[dir="rtl"] body {
+            font-family: 'Cairo', sans-serif;
+        }
+        html[dir="rtl"] .font-serif {
+            font-family: 'Amiri', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #EFE8DA; }
+        ::-webkit-scrollbar-thumb { background: #B87344; border-radius: 4px; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-copper-500 selection:text-cream-50">
+
+    <!-- ===================================================================== -->
+    <!-- 1. ROCK-SOLID 3-COLUMN RESPONSIVE HEADER (NO OVERLAPS, CLEAN SVG)     -->
+    <!-- ===================================================================== -->
+    <header class="sticky top-0 z-40 bg-cream-100/95 backdrop-blur-md border-heritage-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 lg:h-24 gap-4">
+                
+                <!-- COLUMN 1: STANDALONE HORIZONTAL BRAND LOGO (Self-Contained SVG) -->
+                <a href="#" class="flex items-center gap-3 sm:gap-3.5 group focus:outline-none flex-shrink-0">
+                    <img src="assets/logo-horizontal.png" alt="DAR AL-MUIZZ • دار المعز — Boutique Guesthouse" width="1400" height="224"
+                         class="h-9 sm:h-10 xl:h-12 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-[1.02]">
+                </a>
+
+                <!-- COLUMN 2: CENTERED DESKTOP NAVIGATION LINKS -->
+                <nav class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 text-sm font-medium text-umber-800">
+                    <a href="#das-haus" class="hover:text-copper-500 transition-colors whitespace-nowrap" data-i18n="navHouse">Das Haus</a>
+                    <a href="#zimmer" class="hover:text-copper-500 transition-colors whitespace-nowrap" data-i18n="navRooms">Zimmer & Suiten</a>
+                    <a href="#erlebnisse" class="hover:text-copper-500 transition-colors whitespace-nowrap" data-i18n="navExperiences">Erlebnisse</a>
+                    <a href="#lage" class="hover:text-copper-500 transition-colors whitespace-nowrap" data-i18n="navLocation">West Bank Luxor</a>
+                </nav>
+
+                <!-- COLUMN 3: END ACTIONS (LANGUAGE SWITCHER + BOOK CTA / MOBILE HAMBURGER) -->
+                <div class="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0">
+                    <!-- Desktop Language Switcher (DE / EN / AR) -->
+                    <div class="hidden lg:flex items-center bg-cream-200 rounded-full p-1 border-heritage text-xs font-semibold">
+                        <button onclick="setLanguage('de')" id="lang-de" class="px-2.5 py-1 rounded-full transition-all bg-umber-800 text-cream-50">DE</button>
+                        <button onclick="setLanguage('en')" id="lang-en" class="px-2.5 py-1 rounded-full transition-all text-umber-800 hover:text-copper-600">EN</button>
+                        <button onclick="setLanguage('ar')" id="lang-ar" class="px-2.5 py-1 rounded-full transition-all text-umber-800 hover:text-copper-600 font-arabic">عربي</button>
+                    </div>
+
+                    <!-- Desktop Book CTA -->
+                    <button onclick="openBookingModal()" class="hidden sm:inline-flex copper-btn text-cream-50 px-4 lg:px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase shadow-sm hover:opacity-95 transition-all items-center gap-1.5 whitespace-nowrap">
+                        <span data-i18n="btnBookNow">Jetzt Buchen</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+
+                    <!-- Mobile & Tablet Hamburger Button (< 1024px) -->
+                    <button onclick="toggleMobileDrawer(true)" class="lg:hidden p-2.5 rounded-xl bg-cream-200 text-umber-800 hover:bg-cream-300 border-heritage transition-colors" aria-label="Menü öffnen">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- MOBILE SLIDE-OVER DRAWER (< 1024px)                                   -->
+    <!-- ===================================================================== -->
+    <div id="mobile-backdrop" onclick="toggleMobileDrawer(false)" class="fixed inset-0 z-50 bg-umber-900/60 backdrop-blur-xs hidden transition-opacity"></div>
+    <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-80 max-w-[85vw] bg-cream-100 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-6">
+        <div>
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between pb-5 border-heritage-b">
+                <img src="assets/logo-wordmark.png" alt="DAR AL-MUIZZ • دار المعز" width="700" height="193" class="h-11 w-auto">
+                <button onclick="toggleMobileDrawer(false)" class="p-2 rounded-full bg-cream-200 text-umber-800 hover:bg-cream-300">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Language Switcher -->
+            <div class="py-5 border-heritage-b">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-copper-600 font-bold mb-2.5">Sprache / Language / اللغة</p>
+                <div class="grid grid-cols-3 gap-1.5 bg-cream-200 p-1 rounded-xl border-heritage text-xs font-semibold">
+                    <button onclick="setLanguage('de')" id="m-lang-de" class="py-2 rounded-lg bg-umber-800 text-cream-50 transition-all">Deutsch</button>
+                    <button onclick="setLanguage('en')" id="m-lang-en" class="py-2 rounded-lg text-umber-800 transition-all">English</button>
+                    <button onclick="setLanguage('ar')" id="m-lang-ar" class="py-2 rounded-lg text-umber-800 font-arabic transition-all">العربية</button>
+                </div>
+            </div>
+
+            <!-- Drawer Navigation Links -->
+            <nav class="py-6 space-y-3 text-base font-medium text-umber-900">
+                <a href="#das-haus" onclick="toggleMobileDrawer(false)" class="flex items-center justify-between py-2.5 px-2 rounded-lg hover:bg-cream-200/70">
+                    <span data-i18n="navHouse">Das Haus</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-copper-500"></i>
+                </a>
+                <a href="#zimmer" onclick="toggleMobileDrawer(false)" class="flex items-center justify-between py-2.5 px-2 rounded-lg hover:bg-cream-200/70">
+                    <span data-i18n="navRooms">Zimmer & Suiten</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-copper-500"></i>
+                </a>
+                <a href="#erlebnisse" onclick="toggleMobileDrawer(false)" class="flex items-center justify-between py-2.5 px-2 rounded-lg hover:bg-cream-200/70">
+                    <span data-i18n="navExperiences">Erlebnisse</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-copper-500"></i>
+                </a>
+                <a href="#lage" onclick="toggleMobileDrawer(false)" class="flex items-center justify-between py-2.5 px-2 rounded-lg hover:bg-cream-200/70">
+                    <span data-i18n="navLocation">West Bank Luxor</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-copper-500"></i>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Drawer Footer CTA -->
+        <div class="pt-4 border-heritage-t space-y-3">
+            <p class="text-xs text-umber-700 text-center">West Bank • Al-Qurna • Luxor, Egypt</p>
+            <button onclick="toggleMobileDrawer(false); openBookingModal();" class="w-full copper-btn text-cream-50 py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest shadow-md" data-i18n="btnBookNow">
+                Jetzt Buchen
+            </button>
+        </div>
+    </aside>
+
+    <!-- ===================================================================== -->
+    <!-- 2. HERO SECTION — WEST BANK LUXOR & STANDALONE CIRCULAR SEAL          -->
+    <!-- ===================================================================== -->
+    <section class="relative pt-8 pb-16 sm:pt-12 sm:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Editorial Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cream-200 border-heritage">
+                        <span class="w-2 h-2 rounded-full bg-copper-500"></span>
+                        <span class="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-umber-800" data-i18n="heroBadge">
+                            West Bank • Al-Qurna • Luxor • Ägypten
+                        </span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold text-umber-900 leading-[1.14]" data-i18n="heroTitle">
+                        Stille Eleganz am Westufer des Nils in Luxor.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-umber-700 leading-relaxed font-normal max-w-xl" data-i18n="heroSubtitle">
+                        Eingebettet zwischen den grünen Palmenhainen von Al-Gezira und den majestätischen Thebanischen Bergen – ein Boutique-Gästehaus voller handgefertigter islamischer Mosaikkunst, warmem Kupferlicht und zeitloser Ruhe.
+                    </p>
+
+                    <!-- German Traveler Reassurance Highlights -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-medium text-umber-800">
+                        <div class="flex items-center gap-2 bg-cream-200/70 px-3 py-2.5 rounded-xl border-heritage">
+                            <i data-lucide="compass" class="w-4 h-4 text-copper-500 flex-shrink-0"></i>
+                            <span data-i18n="trust1">10 Min. Tal der Könige</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-cream-200/70 px-3 py-2.5 rounded-xl border-heritage">
+                            <i data-lucide="sailboat" class="w-4 h-4 text-copper-500 flex-shrink-0"></i>
+                            <span data-i18n="trust2">5 Min. Nil-Boot Ostufer</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-cream-200/70 px-3 py-2.5 rounded-xl border-heritage">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-copper-500 flex-shrink-0"></i>
+                            <span data-i18n="trust3">Deutschsprachige Gastgeber</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Arched Imagery + Standalone Circular Seal (LUXOR • EGYPT) -->
+                <div class="lg:col-span-6 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-[460px]">
+                        <!-- Decorative Copper Offset Frame -->
+                        <div class="hidden sm:block absolute -inset-3 islamic-arch-frame border border-copper-500/45 pointer-events-none translate-x-2.5 translate-y-2.5"></div>
+                        
+                        <!-- Main Arched Image -->
+                        <div class="relative islamic-arch-frame overflow-hidden shadow-xl bg-umber-900 aspect-[4/4.4] group">
+                            <img 
+                                src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1200&q=85" 
+                                alt="Dar Al-Muizz West Bank Luxor"
+                                onerror="this.src='https://placehold.co/800x880/3B2416/F7F3EB?text=DAR+AL-MUIZZ+WEST+BANK+LUXOR'"
+                                class="w-full h-full object-cover img-zoom opacity-95 sepia-[.10]"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-umber-900/80 via-umber-900/15 to-transparent"></div>
+                            
+                            <!-- Bottom Image Caption -->
+                            <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between text-cream-50">
+                                <div>
+                                    <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-copper-400 font-semibold" data-i18n="heroImgTag">Al-Gezira • Westufer Luxor</p>
+                                    <p class="font-serif text-base sm:text-lg italic" data-i18n="heroImgCaption">Blick auf die Thebanischen Berge</p>
+                                </div>
+                                <span class="font-arabic text-xl sm:text-2xl text-cream-100">دار المعز</span>
+                            </div>
+                        </div>
+
+                        <!-- STANDALONE CIRCULAR PRIMARY SEAL SVG (Cleanly Oriented LUXOR • EGYPT) -->
+                        <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-cream-100 shadow-xl p-1 absolute -bottom-5 -left-2 sm:-bottom-7 sm:-left-7 border-heritage flex items-center justify-center">
+                            <img src="assets/logo-simplified.png" alt="DAR AL-MUIZZ • دار المعز — Boutique Guesthouse" width="500" height="500" class="w-full h-full object-contain rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Quick-Availability Booking Bar -->
+            <div class="mt-14 sm:mt-16 bg-cream-50 rounded-2xl lg:rounded-full p-4 sm:p-3.5 shadow-lg shadow-umber-900/5 border-heritage max-w-5xl mx-auto">
+                <form onsubmit="handleQuickSearch(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2 items-center">
+                    <div class="px-3 sm:px-4 py-2 sm:border-e border-umber-800/15">
+                        <label for="quick-checkin" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-copper-600 mb-1" data-i18n="labelCheckin">Anreise</label>
+                        <input type="date" id="quick-checkin" required class="w-full bg-transparent text-sm font-medium text-umber-900 focus:outline-none cursor-pointer">
+                    </div>
+
+                    <div class="px-3 sm:px-4 py-2 lg:border-e border-umber-800/15">
+                        <label for="quick-checkout" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-copper-600 mb-1" data-i18n="labelCheckout">Abreise</label>
+                        <input type="date" id="quick-checkout" required class="w-full bg-transparent text-sm font-medium text-umber-900 focus:outline-none cursor-pointer">
+                    </div>
+
+                    <div class="px-3 sm:px-4 py-2">
+                        <label for="quick-guests" class="block text-[10px] font-bold uppercase tracking-[0.18em] text-copper-600 mb-1" data-i18n="labelGuests">Gäste</label>
+                        <select id="quick-guests" class="w-full bg-transparent text-sm font-medium text-umber-900 focus:outline-none cursor-pointer">
+                            <option value="1">1 Gast</option>
+                            <option value="2" selected>2 Gäste (1 Suite)</option>
+                            <option value="3">3 Gäste</option>
+                            <option value="4">4 Gäste (2 Suiten)</option>
+                        </select>
+                    </div>
+
+                    <div class="sm:px-2">
+                        <button type="submit" class="w-full copper-btn text-cream-50 py-3.5 px-6 rounded-xl lg:rounded-full text-xs font-semibold uppercase tracking-[0.16em] hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="search" class="w-4 h-4"></i>
+                            <span data-i18n="btnCheckAvail">Verfügbarkeit prüfen</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. HERITAGE & ARCHITECTURE ('DAS HAUS')                               -->
+    <!-- ===================================================================== -->
+    <section id="das-haus" class="py-16 sm:py-24 bg-cream-200/75 border-heritage-t border-heritage-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-14">
+                <div class="flex items-center justify-center gap-4">
+                    <span class="h-[1px] w-12 sm:w-16 bg-copper-500/45"></span>
+                    <i data-lucide="compass" class="w-5 h-5 text-copper-500"></i>
+                    <span class="h-[1px] w-12 sm:w-16 bg-copper-500/45"></span>
+                </div>
+                <p class="text-xs font-bold uppercase tracking-[0.25em] text-copper-600" data-i18n="houseEyebrow">Architektur & Handwerkskunst</p>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-semibold text-umber-900 leading-tight" data-i18n="houseTitle">
+                    Ein Refugium zwischen Tempelgeschichte und Nil-Idylle
+                </h2>
+                <p class="text-umber-700 text-base sm:text-lg leading-relaxed pt-2" data-i18n="houseDesc">
+                    Während das Ostufer von Luxor pulsiert, bewahrt die West Bank (Al-Qurna & Al-Gezira) ihren ursprünglichen, ländlichen Frieden. In der Dar Al-Muizz verbinden wir traditionelle Natursteinbauweise mit feinster islamischer Mosaik- und Kupferkunst.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-cream-100 rounded-2xl p-7 sm:p-8 border-heritage hover:border-copper-500/60 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-cream-200 flex items-center justify-center text-copper-500 mb-6 group-hover:bg-copper-500 group-hover:text-cream-50 transition-colors">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-umber-900 mb-3" data-i18n="pillar1Title">Handgelegte Mosaikkunst</h3>
+                    <p class="text-sm text-umber-700 leading-relaxed" data-i18n="pillar1Desc">
+                        Geometrische Fayence-Fliesen, geschnitzte Mashrabiya-Fenster und handgetriebene Kupferlaternen tauchen jeden Raum in ein warmes, beruhigendes Licht.
+                    </p>
+                </div>
+
+                <div class="bg-cream-100 rounded-2xl p-7 sm:p-8 border-heritage hover:border-copper-500/60 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-cream-200 flex items-center justify-center text-copper-500 mb-6 group-hover:bg-copper-500 group-hover:text-cream-50 transition-colors">
+                        <i data-lucide="mountain-snow" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-umber-900 mb-3" data-i18n="pillar2Title">Blick auf die Thebanischen Berge</h3>
+                    <p class="text-sm text-umber-700 leading-relaxed" data-i18n="pillar2Desc">
+                        Erwachen Sie im stillen Palmengarten, während bei Sonnenaufgang die Heißluftballons lautlos über dem Tal der Könige aufsteigen.
+                    </p>
+                </div>
+
+                <div class="bg-cream-100 rounded-2xl p-7 sm:p-8 border-heritage hover:border-copper-500/60 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-cream-200 flex items-center justify-center text-copper-500 mb-6 group-hover:bg-copper-500 group-hover:text-cream-50 transition-colors">
+                        <i data-lucide="coffee" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-semibold text-umber-900 mb-3" data-i18n="pillar3Title">Kulinarik & Herzlichkeit</h3>
+                    <p class="text-sm text-umber-700 leading-relaxed" data-i18n="pillar3Desc">
+                        Frisches Sonnenbrot, Dattelhonig aus der Oase, frisch gepresster Mangosaft und persönliche Reiseberatung auf Deutsch und Englisch.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. ROOMS & SUITES ('ZIMMER & SUITEN')                                 -->
+    <!-- ===================================================================== -->
+    <section id="zimmer" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.25em] text-copper-600 mb-2" data-i18n="roomsEyebrow">Wohnen am Westufer</p>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-semibold text-umber-900" data-i18n="roomsTitle">Zimmer & Suiten</h2>
+                </div>
+
+                <div class="inline-flex bg-cream-200 p-1.5 rounded-full border-heritage self-start">
+                    <button onclick="filterRooms('all')" id="filter-all" class="room-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-umber-800 text-cream-50 transition-all" data-i18n="filterAll">Alle (3)</button>
+                    <button onclick="filterRooms('suite')" id="filter-suite" class="room-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-umber-800 hover:text-copper-600 transition-all" data-i18n="filterSuites">Suiten</button>
+                    <button onclick="filterRooms('courtyard')" id="filter-courtyard" class="room-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-umber-800 hover:text-copper-600 transition-all" data-i18n="filterCourtyard">Gartenzimmer</button>
+                </div>
+            </div>
+
+            <div id="rooms-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically Rendered Room Cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. WEST BANK LUXOR EXPERIENCES ('ERLEBNISSE')                         -->
+    <!-- ===================================================================== -->
+    <section id="erlebnisse" class="py-16 sm:py-24 bg-umber-900 text-cream-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.06] pointer-events-none" style="background-image: radial-gradient(#B87344 1px, transparent 1px); background-size: 28px 28px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl mb-12 sm:mb-14">
+                <p class="text-xs font-bold uppercase tracking-[0.25em] text-copper-400 mb-3" data-i18n="expEyebrow">Kuratierte West-Bank-Erlebnisse</p>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-semibold text-cream-50 mb-4" data-i18n="expTitle">
+                    Das alte Theben in Ruhe und Tiefe erleben
+                </h2>
+                <p class="text-cream-200/80 font-normal text-base sm:text-lg" data-i18n="expSubtitle">
+                    Wir organisieren für unsere Gäste private Ausflüge abseits der großen Reisegruppen – mit lizenzierten deutschsprachigen Ägyptologen und eigenen Holzbooten.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7 sm:gap-8">
+                <!-- Experience 1 -->
+                <div class="bg-umber-800/80 rounded-2xl overflow-hidden border border-copper-500/25 flex flex-col">
+                    <div class="h-52 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?auto=format&fit=crop&w=800&q=80" alt="Valley of the Kings & Hatshepsut Temple" onerror="this.src='https://placehold.co/600x400/26160C/B87344?text=TAL+DER+KÖNIGE'" class="w-full h-full object-cover sepia-[.12]">
+                    </div>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.2em] text-copper-400 font-semibold" data-i18n="exp1Tag">Privat-Ägyptologe • 4 Stunden</span>
+                            <h3 class="font-serif text-2xl text-cream-50 mt-1 mb-3" data-i18n="exp1Title">Tal der Könige & Hatschepsut-Tempel</h3>
+                            <p class="text-sm text-cream-200/80 leading-relaxed" data-i18n="exp1Desc">
+                                Starten Sie direkt um 06:30 Uhr von unserem Haus aus – nur 10 Minuten Fahrt entfernt – und besuchen Sie die Königsgräber in stiller Morgenatmosphäre.
+                            </p>
+                        </div>
+                        <div class="pt-5 mt-5 border-t border-cream-100/10 flex items-center justify-between text-xs text-copper-400">
+                            <span>€ 75 / Person</span>
+                            <button onclick="openBookingModal('185')" class="underline hover:text-cream-50" data-i18n="expBookLink">Bei Buchung hinzufügen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-umber-800/80 rounded-2xl overflow-hidden border border-copper-500/25 flex flex-col">
+                    <div class="h-52 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=800&q=80" alt="Nile Felucca Sunset Luxor" onerror="this.src='https://placehold.co/600x400/26160C/B87344?text=NIL+FELUKKE+LUXOR'" class="w-full h-full object-cover sepia-[.12]">
+                    </div>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.2em] text-copper-400 font-semibold" data-i18n="exp2Tag">Privates Segelboot • Sonnenuntergang</span>
+                            <h3 class="font-serif text-2xl text-cream-50 mt-1 mb-3" data-i18n="exp2Title">Abendsegeln mit der Felukke auf dem Nil</h3>
+                            <p class="text-sm text-cream-200/80 leading-relaxed" data-i18n="exp2Desc">
+                                Gleiten Sie vorbei an den Bananeninseln und Zuckerrohrfeldern des Westufers, während die Sonne hinter dem Gebirge von Theben versinkt.
+                            </p>
+                        </div>
+                        <div class="pt-5 mt-5 border-t border-cream-100/10 flex items-center justify-between text-xs text-copper-400">
+                            <span>€ 40 / Boot</span>
+                            <button onclick="openBookingModal('185')" class="underline hover:text-cream-50" data-i18n="expBookLink">Bei Buchung hinzufügen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="bg-umber-800/80 rounded-2xl overflow-hidden border border-copper-500/25 flex flex-col">
+                    <div class="h-52 sm:h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80" alt="Hot Air Balloon Luxor West Bank" onerror="this.src='https://placehold.co/600x400/26160C/B87344?text=BALLONFAHRT+WEST+BANK'" class="w-full h-full object-cover sepia-[.12]">
+                    </div>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-[0.2em] text-copper-400 font-semibold" data-i18n="exp3Tag">Dachterrasse & Ballonstart</span>
+                            <h3 class="font-serif text-2xl text-cream-50 mt-1 mb-3" data-i18n="exp3Title">Sonnenaufgang über den Tempelanlagen</h3>
+                            <p class="text-sm text-cream-200/80 leading-relaxed" data-i18n="exp3Desc">
+                                Beobachten Sie das Morgenspektakel der Heißluftballons direkt von unserer Dachterrasse bei frisch gebrühtem Kaffee – oder steigen Sie selbst in die Lüfte.
+                            </p>
+                        </div>
+                        <div class="pt-5 mt-5 border-t border-cream-100/10 flex items-center justify-between text-xs text-copper-400">
+                            <span data-i18n="expIncluded">Dachterrasse inklusive</span>
+                            <span>05:45 – 07:30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. WEST BANK LUXOR LOCATION & DISTANCES ('LAGE & ANREISE')            -->
+    <!-- ===================================================================== -->
+    <section id="lage" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-cream-200 rounded-3xl p-6 sm:p-10 lg:p-12 border-heritage grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-5">
+                    <span class="text-xs font-bold uppercase tracking-[0.22em] text-copper-600" data-i18n="locEyebrow">Lage & Entfernungen</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-umber-900" data-i18n="locTitle">Am ruhigen Westufer des Nils — Al-Gezira, Luxor</h2>
+                    <p class="text-sm sm:text-base text-umber-700 leading-relaxed" data-i18n="locDesc">
+                        Dar Al-Muizz liegt eingebettet in die grünen Gärten von Al-Gezira / Al-Qurna auf der West Bank von Luxor. Sie wohnen in unmittelbarer Nähe zu den großen Monumenten des alten Ägypten und erreichen das Ostufer bequem per Nilboot.
+                    </p>
+
+                    <!-- Distances Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="bg-cream-100 rounded-xl p-3.5 border-heritage">
+                            <p class="font-serif text-xl font-bold text-copper-600">5 Min.</p>
+                            <p class="text-[11px] font-medium text-umber-800" data-i18n="distFerry">Nil-Anleger (Boot zum Luxor-Tempel)</p>
+                        </div>
+                        <div class="bg-cream-100 rounded-xl p-3.5 border-heritage">
+                            <p class="font-serif text-xl font-bold text-copper-600">8 Min.</p>
+                            <p class="text-[11px] font-medium text-umber-800" data-i18n="distMemnon">Memnonkolosse & Medinet Habu</p>
+                        </div>
+                        <div class="bg-cream-100 rounded-xl p-3.5 border-heritage">
+                            <p class="font-serif text-xl font-bold text-copper-600">12 Min.</p>
+                            <p class="text-[11px] font-medium text-umber-800" data-i18n="distValley">Tal der Könige & Hatschepsut</p>
+                        </div>
+                        <div class="bg-cream-100 rounded-xl p-3.5 border-heritage">
+                            <p class="font-serif text-xl font-bold text-copper-600">35 Min.</p>
+                            <p class="text-[11px] font-medium text-umber-800" data-i18n="distAirport">Flughafen Luxor (LXR)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-copper-500 flex-shrink-0"></i>
+                            <span class="font-semibold text-umber-900">Al-Gezira, West Bank, 85951 Luxor, Ägypten</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="phone-call" class="w-4 h-4 text-copper-500 flex-shrink-0"></i>
+                            <span class="font-semibold text-umber-900">+20 95 231 8490 (DE / EN / AR)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stylized Nile West Bank vs East Bank Vector Map -->
+                <div class="lg:col-span-5 bg-cream-100 rounded-2xl p-5 sm:p-6 border-heritage">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-umber-800">West Bank • Luxor</span>
+                        <span class="text-[11px] text-copper-600 font-medium">25°42'18"N 32°37'45"E</span>
+                    </div>
+                    <svg viewBox="0 0 360 205" class="w-full h-48 rounded-xl bg-cream-200/80 border border-umber-800/10">
+                        <path d="M0 55 L45 22 L95 48 L140 18 L185 55 Z" fill="#D8C7AF" opacity="0.6"/>
+                        <text x="16" y="18" fill="#5C3B28" font-size="8.5" font-weight="bold" font-family="sans-serif">THEBANISCHE BERGE</text>
+                        <text x="16" y="30" fill="#5C3B28" font-size="8" font-family="sans-serif">• Tal der Könige (12 Min.)</text>
+                        <text x="16" y="42" fill="#5C3B28" font-size="8" font-family="sans-serif">• Hatschepsut-Tempel</text>
+                        <text x="20" y="95" fill="#5C3B28" font-size="8" font-family="sans-serif">• Medinet Habu</text>
+
+                        <!-- River Nile -->
+                        <path d="M235 0 C225 70, 210 135, 195 205 L245 205 C260 135, 275 70, 285 0 Z" fill="#C4B59E" opacity="0.55"/>
+                        <text x="242" y="105" fill="#3B2416" font-size="9" font-weight="bold" font-family="serif" transform="rotate(-78 242 105)">DER NIL</text>
+
+                        <!-- East Bank -->
+                        <text x="275" y="40" fill="#5C3B28" font-size="8.5" font-weight="bold" font-family="sans-serif">OSTUFER</text>
+                        <text x="272" y="55" fill="#5C3B28" font-size="8" font-family="sans-serif">• Karnak-Tempel</text>
+                        <text x="268" y="130" fill="#5C3B28" font-size="8" font-family="sans-serif">• Luxor-Tempel</text>
+                        <text x="265" y="175" fill="#5C3B28" font-size="8" font-family="sans-serif">• Flughafen (LXR)</text>
+
+                        <!-- Boat Line -->
+                        <path d="M192 122 L258 126" stroke="#B87344" stroke-width="2" stroke-dasharray="3 3"/>
+
+                        <!-- Dar Al-Muizz Marker -->
+                        <circle cx="178" cy="122" r="14" fill="#B87344" fill-opacity="0.22"/>
+                        <circle cx="178" cy="122" r="6" fill="#B87344" stroke="#F7F3EB" stroke-width="2"/>
+                        <rect x="64" y="134" width="112" height="25" rx="6" fill="#3B2416"/>
+                        <text x="74" y="150" fill="#F7F3EB" font-size="9.5" font-weight="bold" font-family="serif">DAR AL-MUIZZ</text>
+                    </svg>
+                    <div class="mt-3 flex justify-between items-center text-[11px] text-umber-700">
+                        <span>West Bank (Al-Qurna / Al-Gezira)</span>
+                        <span>Boot zum Ostufer: 5 Min.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. FOOTER WITH STANDALONE CIRCULAR SEAL SVG (LUXOR • EGYPT)           -->
+    <!-- ===================================================================== -->
+    <footer class="bg-cream-200 border-heritage-t pt-14 sm:pt-16 pb-10 text-umber-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-heritage-b items-center">
+                
+                <!-- Standalone Circular Primary Seal -->
+                <div class="md:col-span-5 flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-start">
+                    <div class="w-32 h-32 sm:w-36 sm:h-36 flex-shrink-0">
+                        <img src="assets/logo-primary.png" alt="DAR AL-MUIZZ • دار المعز — Boutique Guesthouse" width="700" height="702" loading="lazy" class="w-full h-full object-contain rounded-full bg-cream-100">
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="font-serif text-xl font-bold text-umber-900">DAR AL-MUIZZ • دار المعز</h4>
+                        <p class="text-xs text-umber-700 leading-relaxed max-w-xs" data-i18n="footerDesc">
+                            Ein intimes Boutique-Gästehaus auf der West Bank von Luxor – für Reisende, die islamische Baukunst, Stille und authentische Gastfreundschaft schätzen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Navigation Columns -->
+                <div class="md:col-span-4 grid grid-cols-2 gap-4 text-xs font-medium">
+                    <div class="space-y-2.5">
+                        <p class="uppercase tracking-widest text-copper-600 font-bold text-[10px]">Entdecken</p>
+                        <a href="#das-haus" class="block hover:text-copper-600">Das Haus</a>
+                        <a href="#zimmer" class="block hover:text-copper-600">Zimmer & Suiten</a>
+                        <a href="#erlebnisse" class="block hover:text-copper-600">West Bank Touren</a>
+                    </div>
+                    <div class="space-y-2.5">
+                        <p class="uppercase tracking-widest text-copper-600 font-bold text-[10px]">Service</p>
+                        <button onclick="openBookingModal()" class="block hover:text-copper-600 text-start">Direktbuchung</button>
+                        <button onclick="showToast('Impressum & Anbieterkennzeichnung geöffnet.')" class="block hover:text-copper-600 text-start">Impressum</button>
+                        <button onclick="showToast('Datenschutzerklärung gemäß DSGVO angezeigt.')" class="block hover:text-copper-600 text-start">Datenschutz (DSGVO)</button>
+                    </div>
+                </div>
+
+                <!-- Direct Inquiry -->
+                <div class="md:col-span-3 space-y-3">
+                    <p class="uppercase tracking-widest text-copper-600 font-bold text-[10px]">Persönliche Beratung</p>
+                    <p class="text-xs text-umber-700">Planen Sie Ihre Reise nach Luxor? Wir beraten Sie gerne auf Deutsch zu Flügen, Nilfahrten und Ausflügen.</p>
+                    <button onclick="openBookingModal()" class="w-full py-2.5 px-4 rounded-xl border border-umber-800 text-umber-900 text-xs font-semibold hover:bg-umber-800 hover:text-cream-50 transition-colors">
+                        Aufenthalt anfragen
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-umber-700 gap-4">
+                <p>© 2026 DAR AL-MUIZZ Boutique Guesthouse • West Bank, Luxor, Egypt.</p>
+                <p class="tracking-widest uppercase">Handmade Heritage • Luxor, Egypt</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- 8. INTERACTIVE RESERVATION MODAL (+€25 LUXOR AIRPORT PICKUP)          -->
+    <!-- ===================================================================== -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-4 bg-umber-900/70 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-cream-100 w-full max-w-2xl rounded-3xl shadow-2xl border-heritage overflow-hidden my-auto relative">
+            
+            <!-- Modal Header -->
+            <div class="bg-cream-200 px-5 sm:px-8 py-4 sm:py-5 border-heritage-b flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-copper-500"></span>
+                    <h3 class="font-serif text-xl sm:text-2xl font-semibold text-umber-900" data-i18n="modalTitle">Direktbuchung — Dar Al-Muizz Luxor</h3>
+                </div>
+                <button onclick="closeBookingModal()" class="p-2 rounded-full hover:bg-cream-300 text-umber-800 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Form View -->
+            <form id="booking-form" onsubmit="submitBooking(event)" class="p-5 sm:p-8 space-y-5 max-h-[82vh] overflow-y-auto">
+                <div>
+                    <label for="modal-room-select" class="block text-xs font-bold uppercase tracking-wider text-umber-800 mb-2" data-i18n="modalSelectRoom">Suite / Zimmer wählen</label>
+                    <select id="modal-room-select" onchange="recalculateTotal()" class="w-full bg-cream-50 border border-umber-800/20 rounded-xl px-4 py-3 text-sm font-medium text-umber-900 focus:outline-none focus:border-copper-500">
+                        <option value="135">Al-Qurna Garten- & Hofzimmer — € 135 / Nacht (28 m²)</option>
+                        <option value="185" selected>Nile Breeze Mosaik-Suite — € 185 / Nacht (42 m²)</option>
+                        <option value="245">Theban Mountain Dachterrassen-Suite — € 245 / Nacht (56 m²)</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="modal-checkin" class="block text-xs font-bold uppercase tracking-wider text-umber-800 mb-1.5" data-i18n="labelCheckin">Anreise</label>
+                        <input type="date" id="modal-checkin" onchange="recalculateTotal()" required class="w-full bg-cream-50 border border-umber-800/20 rounded-xl px-4 py-2.5 text-sm text-umber-900 focus:outline-none focus:border-copper-500">
+                    </div>
+                    <div>
+                        <label for="modal-checkout" class="block text-xs font-bold uppercase tracking-wider text-umber-800 mb-1.5" data-i18n="labelCheckout">Abreise</label>
+                        <input type="date" id="modal-checkout" onchange="recalculateTotal()" required class="w-full bg-cream-50 border border-umber-800/20 rounded-xl px-4 py-2.5 text-sm text-umber-900 focus:outline-none focus:border-copper-500">
+                    </div>
+                </div>
+
+                <!-- Private Luxor Airport Pickup Toggle (+€25) -->
+                <div>
+                    <label class="flex items-center justify-between p-4 rounded-xl bg-cream-50 border-heritage cursor-pointer hover:border-copper-500 transition-colors gap-3">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="addon-airport" onchange="recalculateTotal()" class="w-4 h-4 accent-copper-500 rounded">
+                            <div>
+                                <p class="text-xs sm:text-sm font-semibold text-umber-900" data-i18n="transferTitle">Privater Transfer vom Flughafen Luxor (LXR)</p>
+                                <p class="text-[11px] text-umber-700" data-i18n="transferDesc">Direkte Fahrt über die Nilbrücke zur West Bank (ca. 35 Min.)</p>
+                            </div>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-copper-600 whitespace-nowrap">+ € 25</span>
+                    </label>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="guest-name" class="block text-xs font-bold uppercase tracking-wider text-umber-800 mb-1.5" data-i18n="guestNameLabel">Vor- und Nachname</label>
+                        <input type="text" id="guest-name" required placeholder="Dr. Stefan Bergmann" class="w-full bg-cream-50 border border-umber-800/20 rounded-xl px-4 py-2.5 text-sm text-umber-900 focus:outline-none focus:border-copper-500">
+                    </div>
+                    <div>
+                        <label for="guest-email" class="block text-xs font-bold uppercase tracking-wider text-umber-800 mb-1.5" data-i18n="guestEmailLabel">E-Mail-Adresse</label>
+                        <input type="email" id="guest-email" required placeholder="bergmann@beispiel.de" class="w-full bg-cream-50 border border-umber-800/20 rounded-xl px-4 py-2.5 text-sm text-umber-900 focus:outline-none focus:border-copper-500">
+                    </div>
+                </div>
+
+                <!-- Live Euro Price Summary -->
+                <div class="bg-cream-200 rounded-2xl p-4 sm:p-5 border-heritage space-y-2 text-sm">
+                    <div class="flex justify-between text-umber-700 text-xs sm:text-sm">
+                        <span id="calc-breakdown">3 Nächte × € 185</span>
+                        <span id="calc-subtotal">€ 555</span>
+                    </div>
+                    <div class="flex justify-between text-umber-700 text-xs">
+                        <span>Inklusive ägyptischem Bio-Frühstück & Steuern</span>
+                        <span class="text-copper-600 font-medium">Inklusive</span>
+                    </div>
+                    <div class="pt-3 border-heritage-t flex justify-between items-baseline">
+                        <span class="font-bold text-umber-900 text-xs sm:text-sm" data-i18n="totalLabel">Gesamtbetrag (Zahlung vor Ort)</span>
+                        <span id="calc-total" class="font-serif text-2xl font-bold text-umber-900">€ 555</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full copper-btn text-cream-50 py-3.5 sm:py-4 rounded-xl text-xs sm:text-sm font-semibold uppercase tracking-widest shadow-md hover:opacity-95 transition-all">
+                    <span data-i18n="confirmBookingBtn">Unverbindlich reservieren (Kostenlose Stornierung)</span>
+                </button>
+            </form>
+
+            <!-- Instant Booking Confirmation View -->
+            <div id="booking-confirmation" class="hidden p-7 sm:p-10 text-center space-y-5">
+                <div class="w-16 h-16 rounded-full bg-copper-500/15 text-copper-600 flex items-center justify-center mx-auto">
+                    <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+                </div>
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-copper-600">Reservierung bestätigt • West Bank Luxor</p>
+                <h4 class="font-serif text-2xl sm:text-3xl text-umber-900" id="conf-heading">Vielen Dank!</h4>
+                <p class="text-sm text-umber-700 max-w-md mx-auto leading-relaxed">
+                    Wir freuen uns darauf, Sie in der <strong>Dar Al-Muizz (West Bank, Luxor)</strong> willkommen zu heißen. Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet.
+                </p>
+                <div class="bg-cream-200 rounded-2xl p-4 max-w-sm mx-auto border-heritage">
+                    <span class="text-[10px] uppercase tracking-widest text-umber-700 block">Buchungsreferenz</span>
+                    <span id="conf-ref" class="font-mono text-lg font-bold text-umber-900 tracking-wider">DAM-LXR-2026</span>
+                </div>
+                <div class="pt-3">
+                    <button onclick="closeBookingModal()" class="px-8 py-3 rounded-full bg-umber-800 text-cream-50 text-xs font-semibold uppercase tracking-wider hover:bg-umber-900 transition-colors">
+                        Zurück zur Website
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Non-Blocking Toast Box -->
+    <div id="toast-box" class="fixed bottom-5 right-5 left-5 sm:left-auto z-50 hidden items-center gap-3 bg-umber-900 text-cream-50 px-5 py-3.5 rounded-2xl shadow-xl border border-copper-500/40 text-xs sm:text-sm">
+        <i data-lucide="info" class="w-4 h-4 text-copper-400 flex-shrink-0"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- JAVASCRIPT LOGIC: DE / EN / AR MULTILINGUAL ENGINE & BOOKING SYSTEM   -->
+    <!-- ===================================================================== -->
+    <script>
+        const roomsData = [
+            {
+                id: 'alqurna',
+                category: 'courtyard',
+                price: 135,
+                size: '28 m²',
+                image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85',
+                de: {
+                    name: 'Al-Qurna Garten- & Hofzimmer',
+                    tag: 'Palmengarten & Mosaiknische',
+                    desc: 'Handgelegte kupfer- und sandfarbene Zellij-Mosaike, Queensize-Bett mit ägyptischer Bio-Baumwolle und direkter Zugang zum stillen Innenhof.',
+                    amenities: ['Queensize-Bett', 'Klimaanlage', 'Bio-Frühstück']
+                },
+                en: {
+                    name: 'Al-Qurna Courtyard Room',
+                    tag: 'Palm Garden & Mosaic Alcove',
+                    desc: 'Hand-laid copper and sand Zellij mosaics, queen bed dressed in organic Egyptian cotton, and direct access to the tranquil courtyard.',
+                    amenities: ['Queen Bed', 'Climate Control', 'Organic Breakfast']
+                },
+                ar: {
+                    name: 'غرفة القرنة المطلة على الفناء',
+                    tag: 'حديقة النخيل والفسيفساء اليدوية',
+                    desc: 'فسيفساء الزليج اليدوية بألوان النحاس والرمال، سرير مزدوج بقطن مصري عضوي، وإطلالة مباشرة على الصحن الداخلي الهادئ.',
+                    amenities: ['سرير كوين', 'تكييف هادئ', 'إفطار عضوي']
+                }
+            },
+            {
+                id: 'nilebreeze',
+                category: 'suite',
+                price: 185,
+                size: '42 m²',
+                image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=85',
+                de: {
+                    name: 'Nile Breeze Mosaik-Suite',
+                    tag: 'Mashrabiya-Erker & Salon',
+                    desc: 'Geschnitzte Mashrabiya-Holzfenster, historische Zedernholzdecke, separater Lesesalon und eine kühle Brise aus den Nilgärten von Al-Gezira.',
+                    amenities: ['Kingsize-Bett', 'Mashrabiya-Erker', 'Espressomaschine']
+                },
+                en: {
+                    name: 'Nile Breeze Mosaic Suite',
+                    tag: 'Mashrabiya Bay & Lounge',
+                    desc: 'Carved wooden Mashrabiya windows, historic cedar ceiling, separate reading lounge, and fresh breezes from the Nile palm groves.',
+                    amenities: ['King Bed', 'Mashrabiya Alcove', 'Espresso Bar']
+                },
+                ar: {
+                    name: 'جناح نسيم النيل بالفسيفساء',
+                    tag: 'مشربية خشبية وصالة جلوس',
+                    desc: 'نوافذ مشربية منقوشة يدوياً، أسقف من خشب الأرز، صالة قراءة منفصلة، ونسيم عليل قادم من حدائق النيل بالبر الغربي.',
+                    amenities: ['سرير كينج', 'مشربية تراثية', 'ركن قهوة']
+                }
+            },
+            {
+                id: 'theban',
+                category: 'suite',
+                price: 245,
+                size: '56 m²',
+                image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=900&q=85',
+                de: {
+                    name: 'Theban Mountain Dachterrassen-Suite',
+                    tag: 'Private Loggia & Ballon-Blick',
+                    desc: 'Unsere großzügigste Suite mit privater Dachterrasse und unverbautem Panoramablick auf das Gebirge von Theben und die morgendlichen Heißluftballons.',
+                    amenities: ['Super-King-Bett', 'Private Loggia', 'Freistehende Wanne']
+                },
+                en: {
+                    name: 'Theban Mountain Rooftop Suite',
+                    tag: 'Private Loggia & Balloon View',
+                    desc: 'Our most spacious sanctuary featuring a private rooftop terrace with panoramic views of the Theban Peaks and sunrise hot air balloons.',
+                    amenities: ['Super King Bed', 'Private Loggia', 'Soaking Tub']
+                },
+                ar: {
+                    name: 'جناح جبل طيبة العلوي',
+                    tag: 'تراس خاص وإطلالة على المناطيد',
+                    desc: 'أوسع أجنحتنا مع شرفة خاصة وإطلالة بانورامية ساحرة على جبال طيبة ومناطيد الهواء الساخن عند شروق الشمس.',
+                    amenities: ['سرير سوبر كينج', 'تراس خاص', 'حوض استحمام']
+                }
+            }
+        ];
+
+        const translations = {
+            navHouse: { de: "Das Haus", en: "The House", ar: "عن الدار" },
+            navRooms: { de: "Zimmer & Suiten", en: "Rooms & Suites", ar: "الغرف والأجنحة" },
+            navExperiences: { de: "Erlebnisse", en: "Experiences", ar: "التجارب" },
+            navLocation: { de: "West Bank Luxor", en: "West Bank Luxor", ar: "البر الغربي الأقصر" },
+            btnBookNow: { de: "Jetzt Buchen", en: "Book Now", ar: "احجز الآن" },
+            heroBadge: {
+                de: "West Bank • Al-Qurna • Luxor • Ägypten",
+                en: "West Bank • Al-Qurna • Luxor • Egypt",
+                ar: "البر الغربي • القرنة • الأقصر • مصر"
+            },
+            heroTitle: {
+                de: "Stille Eleganz am Westufer des Nils in Luxor.",
+                en: "Quiet elegance on the West Bank of the Nile in Luxor.",
+                ar: "أناقة وهدوء على الضفة الغربية للنيل في الأقصر."
+            },
+            heroSubtitle: {
+                de: "Eingebettet zwischen den grünen Palmenhainen von Al-Gezira und den majestätischen Thebanischen Bergen – ein Boutique-Gästehaus voller handgefertigter islamischer Mosaikkunst, warmem Kupferlicht und zeitloser Ruhe.",
+                en: "Nestled between the lush palm groves of Al-Gezira and the majestic Theban Mountains — a boutique guesthouse crafted with Islamic mosaic art, warm copper light, and timeless serenity.",
+                ar: "بين بساتين النخيل الخضراء في الجزيرة وجبال طيبة العريقة؛ بيت ضيافة بوتيكي يجمع بين فنون الفسيفساء الإسلامية اليدوية وإضاءة النحاس الدافئة."
+            },
+            trust1: { de: "10 Min. Tal der Könige", en: "10 mins Valley of the Kings", ar: "10 دقائق لوادي الملوك" },
+            trust2: { de: "5 Min. Nil-Boot Ostufer", en: "5 mins Nile boat East Bank", ar: "5 دقائق قارب للبر الشرقي" },
+            trust3: { de: "Deutschsprachige Gastgeber", en: "German & English hosts", ar: "فريق يتحدث الألمانية والإنجليزية" },
+            heroImgTag: { de: "Al-Gezira • Westufer Luxor", en: "Al-Gezira • West Bank Luxor", ar: "الجزيرة • البر الغربي بالأقصر" },
+            heroImgCaption: {
+                de: "Blick auf die Thebanischen Berge",
+                en: "Views of the Theban Mountains",
+                ar: "إطلالة على جبال طيبة"
+            },
+            labelCheckin: { de: "Anreise", en: "Check-in", ar: "تاريخ الوصول" },
+            labelCheckout: { de: "Abreise", en: "Check-out", ar: "تاريخ المغادرة" },
+            labelGuests: { de: "Gäste", en: "Guests", ar: "الضيوف" },
+            btnCheckAvail: { de: "Verfügbarkeit prüfen", en: "Check Availability", ar: "تحقق من التوافر" },
+            houseEyebrow: { de: "Architektur & Handwerkskunst", en: "Architecture & Atmosphere", ar: "العمارة والأجواء" },
+            houseTitle: {
+                de: "Ein Refugium zwischen Tempelgeschichte und Nil-Idylle",
+                en: "A sanctuary between ancient temples and Nile serenity",
+                ar: "ملاذ يجمع بين عبق التاريخ وسكينة النيل"
+            },
+            houseDesc: {
+                de: "Während das Ostufer von Luxor pulsiert, bewahrt die West Bank (Al-Qurna & Al-Gezira) ihren ursprünglichen, ländlichen Frieden. In der Dar Al-Muizz verbinden wir traditionelle Natursteinbauweise mit feinster islamischer Mosaik- und Kupferkunst.",
+                en: "While Luxor's East Bank bustles, the West Bank preserves its peaceful rural charm. At Dar Al-Muizz, we blend traditional stone architecture with fine Islamic mosaic and copper craftsmanship.",
+                ar: "بينما ينبض البر الشرقي للأقصر بالحياة، يحتفظ البر الغربي بسكينته الريفية الساحرة. في دار المعز نمزج العمارة التراثية بأرقى فنون الفسيفساء والنحاس."
+            },
+            pillar1Title: { de: "Handgelegte Mosaikkunst", en: "Handcrafted Mosaics", ar: "فسيفساء يدوية أصيلة" },
+            pillar1Desc: {
+                de: "Geometrische Fayence-Fliesen, geschnitzte Mashrabiya-Fenster und handgetriebene Kupferlaternen tauchen jeden Raum in ein warmes, beruhigendes Licht.",
+                en: "Geometric faience tiles, carved Mashrabiya windows, and hand-hammered copper lanterns bathe every space in warm, calming light.",
+                ar: "بلاط الزليج الهندسي، مشربيات الخشب المنقوش، وفوانيس النحاس اليدوية تمنح كل زاوية ضوءاً دافئاً ومريحاً."
+            },
+            pillar2Title: { de: "Blick auf die Thebanischen Berge", en: "Theban Mountain Views", ar: "إطلالة جبال طيبة" },
+            pillar2Desc: {
+                de: "Erwachen Sie im stillen Palmengarten, während bei Sonnenaufgang die Heißluftballons lautlos über dem Tal der Könige aufsteigen.",
+                en: "Awake in our quiet palm garden as hot air balloons drift silently above the Valley of the Kings at sunrise.",
+                ar: "استيقظ في حديقة النخيل الهادئة بينما تحلق مناطيد الهواء الساخن بصمت فوق وادي الملوك عند شروق الشمس."
+            },
+            pillar3Title: { de: "Kulinarik & Herzlichkeit", en: "Culinary Heritage", ar: "ضيافة ومذاق أصيل" },
+            pillar3Desc: {
+                de: "Frisches Sonnenbrot, Dattelhonig aus der Oase, frisch gepresster Mangosaft und persönliche Reiseberatung auf Deutsch und Englisch.",
+                en: "Freshly baked sun bread, oasis date honey, fresh mango juice, and personal travel planning in German and English.",
+                ar: "خبز طازج، عسل التمر من الواحات، عصير المانجو الطبيعي، وتنظيم رحلاتك السياحية بكل اهتمام."
+            },
+            roomsEyebrow: { de: "Wohnen am Westufer", en: "West Bank Living", ar: "الإقامة في البر الغربي" },
+            roomsTitle: { de: "Zimmer & Suiten", en: "Rooms & Suites", ar: "الغرف والأجنحة" },
+            filterAll: { de: "Alle (3)", en: "All (3)", ar: "الكل (3)" },
+            filterSuites: { de: "Suiten", en: "Suites", ar: "الأجنحة" },
+            filterCourtyard: { de: "Gartenzimmer", en: "Courtyard Rooms", ar: "غرف الفناء" },
+            perNight: { de: "/ Nacht", en: "/ night", ar: "/ ليلة" },
+            bookRoomBtn: { de: "Suite reservieren", en: "Reserve Suite", ar: "احجز الجناح" },
+            expEyebrow: { de: "Kuratierte West-Bank-Erlebnisse", en: "Curated West Bank Experiences", ar: "تجارب البر الغربي المختارة" },
+            expTitle: { de: "Das alte Theben in Ruhe und Tiefe erleben", en: "Experience Ancient Thebes in depth and serenity", ar: "اكتشف طيبة القديمة بعمق وهدوء" },
+            expSubtitle: {
+                de: "Wir organisieren für unsere Gäste private Ausflüge abseits der großen Reisegruppen – mit lizenzierten deutschsprachigen Ägyptologen und eigenen Holzbooten.",
+                en: "We arrange private excursions away from the crowds — with licensed Egyptologists and our own wooden Nile boats.",
+                ar: "نرتب لضيوفنا جولات خاصة بعيداً عن الزحام برفقة مرشدين متخصصين وقوارب خشبية خاصة على النيل."
+            },
+            exp1Tag: { de: "Privat-Ägyptologe • 4 Stunden", en: "Private Egyptologist • 4 Hours", ar: "مرشد أثري خاص • 4 ساعات" },
+            exp1Title: { de: "Tal der Könige & Hatschepsut-Tempel", en: "Valley of the Kings & Hatshepsut Temple", ar: "وادي الملوك ومعبد حتشبسوت" },
+            exp1Desc: {
+                de: "Starten Sie direkt um 06:30 Uhr von unserem Haus aus – nur 10 Minuten Fahrt entfernt – und besuchen Sie die Königsgräber in stiller Morgenatmosphäre.",
+                en: "Depart at 06:30 AM directly from our guesthouse — just 10 minutes away — and explore the royal tombs in serene morning light.",
+                ar: "انطلق في السادسة والنصف صباحاً من الدار — على بُعد 10 دقائق فقط — وزر المقابر الملكية في هدوء الصباح."
+            },
+            exp2Tag: { de: "Privates Segelboot • Sonnenuntergang", en: "Private Sailboat • Sunset", ar: "فلوكة شراعية خاصة • وقت الغروب" },
+            exp2Title: { de: "Abendsegeln mit der Felukke auf dem Nil", en: "Sunset Felucca Sail on the Nile", ar: "إبحار الغروب بالفلوكة في النيل" },
+            exp2Desc: {
+                de: "Gleiten Sie vorbei an den Bananeninseln und Zuckerrohrfeldern des Westufers, während die Sonne hinter dem Gebirge von Theben versinkt.",
+                en: "Glide past Banana Island and the lush sugarcane fields of the West Bank as the sun sets behind the Theban hills.",
+                ar: "أبحر بمحاذاة جزيرة الموز وحقول قصب السكر في البر الغربي بينما تغرب الشمس خلف جبال طيبة."
+            },
+            exp3Tag: { de: "Dachterrasse & Ballonstart", en: "Rooftop & Balloon Launch", ar: "التراس العلوي ومشهد المناطيد" },
+            exp3Title: { de: "Sonnenaufgang über den Tempelanlagen", en: "Sunrise Over the Ancient Temples", ar: "شروق الشمس فوق المعابد الأثرية" },
+            exp3Desc: {
+                de: "Beobachten Sie das Morgenspektakel der Heißluftballons direkt von unserer Dachterrasse bei frisch gebrühtem Kaffee – oder steigen Sie selbst in die Lüfte.",
+                en: "Watch the morning spectacle of hot air balloons right from our rooftop over freshly brewed coffee — or take to the skies yourself.",
+                ar: "شاهد مشهد إقلاع المناطيد الصباحي مباشرة من تراس الدار مع القهوة الطازجة، أو حلّق في سماء الأقصر."
+            },
+            expBookLink: { de: "Bei Buchung hinzufügen →", en: "Add to stay →", ar: "أضف إلى الحجز ←" },
+            expIncluded: { de: "Dachterrasse inklusive", en: "Rooftop included", ar: "التراس مجاناً للضيوف" },
+            locEyebrow: { de: "Lage & Entfernungen", en: "Location & Distances", ar: "الموقع والمسافات" },
+            locTitle: {
+                de: "Am ruhigen Westufer des Nils — Al-Gezira, Luxor",
+                en: "On the peaceful West Bank of the Nile — Al-Gezira, Luxor",
+                ar: "على الضفة الغربية الهادئة للنيل — الجزيرة، الأقصر"
+            },
+            locDesc: {
+                de: "Dar Al-Muizz liegt eingebettet in die grünen Gärten von Al-Gezira / Al-Qurna auf der West Bank von Luxor. Sie wohnen in unmittelbarer Nähe zu den großen Monumenten des alten Ägypten und erreichen das Ostufer bequem per Nilboot.",
+                en: "Dar Al-Muizz sits amid the lush gardens of Al-Gezira / Al-Qurna on Luxor's West Bank, minutes from ancient Egypt's greatest monuments and a 5-minute boat ride across the Nile to the East Bank.",
+                ar: "تقع دار المعز وسط حدائق الجزيرة / القرنة الخضراء بالبر الغربي في الأقصر، على بُعد دقائق من أعظم آثار مصر القديمة و5 دقائق بالقارب إلى البر الشرقي."
+            },
+            distFerry: { de: "Nil-Anleger (Boot zum Luxor-Tempel)", en: "Nile Pier (Boat to Luxor Temple)", ar: "مرسى النيل (قارب لمعبد الأقصر)" },
+            distMemnon: { de: "Memnonkolosse & Medinet Habu", en: "Colossi of Memnon & Medinet Habu", ar: "تمثالا ممنون ومدينة هابو" },
+            distValley: { de: "Tal der Könige & Hatschepsut", en: "Valley of the Kings & Hatshepsut", ar: "وادي الملوك ومعبد حتشبسوت" },
+            distAirport: { de: "Flughafen Luxor (LXR)", en: "Luxor Airport (LXR)", ar: "مطار الأقصر الدولي (LXR)" },
+            footerDesc: {
+                de: "Ein intimes Boutique-Gästehaus auf der West Bank von Luxor – für Reisende, die islamische Baukunst, Stille und authentische Gastfreundschaft schätzen.",
+                en: "An intimate boutique guesthouse on Luxor's West Bank — for travelers who cherish Islamic architecture, tranquility, and authentic hospitality.",
+                ar: "بيت ضيافة بوتيكي في البر الغربي بالأقصر؛ لعشاق العمارة الإسلامية والهدوء والضيافة الأصيلة."
+            },
+            modalTitle: { de: "Direktbuchung — Dar Al-Muizz Luxor", en: "Direct Reservation — Dar Al-Muizz Luxor", ar: "الحجز المباشر — دار المعز الأقصر" },
+            modalSelectRoom: { de: "Suite / Zimmer wählen", en: "Select Suite / Room", ar: "اختر الجناح أو الغرفة" },
+            transferTitle: { de: "Privater Transfer vom Flughafen Luxor (LXR)", en: "Private Transfer from Luxor Airport (LXR)", ar: "توصيل خاص من مطار الأقصر (LXR)" },
+            transferDesc: { de: "Direkte Fahrt über die Nilbrücke zur West Bank (ca. 35 Min.)", en: "Direct private car across the Nile to the West Bank (~35 mins)", ar: "سيارة خاصة مباشرة إلى البر الغربي (حوالي 35 دقيقة)" },
+            guestNameLabel: { de: "Vor- und Nachname", en: "Full Name", ar: "الاسم الكامل" },
+            guestEmailLabel: { de: "E-Mail-Adresse", en: "Email Address", ar: "البريد الإلكتروني" },
+            totalLabel: { de: "Gesamtbetrag (Zahlung vor Ort)", en: "Total Amount (Pay at property)", ar: "المبلغ الإجمالي (الدفع عند الوصول)" },
+            confirmBookingBtn: { de: "Unverbindlich reservieren (Kostenlose Stornierung)", en: "Confirm Reservation (Free Cancellation)", ar: "تأكيد الحجز (إلغاء مجاني)" }
+        };
+
+        let currentLang = 'de';
+        let currentFilter = 'all';
+
+        function initDates() {
+            const today = new Date();
+            const checkin = new Date(today);
+            checkin.setDate(today.getDate() + 14);
+            const checkout = new Date(checkin);
+            checkout.setDate(checkin.getDate() + 3);
+
+            const fmt = (d) => d.toISOString().split('T')[0];
+            document.getElementById('quick-checkin').value = fmt(checkin);
+            document.getElementById('quick-checkout').value = fmt(checkout);
+            document.getElementById('modal-checkin').value = fmt(checkin);
+            document.getElementById('modal-checkout').value = fmt(checkout);
+        }
+
+        function renderRooms() {
+            const grid = document.getElementById('rooms-grid');
+            const filtered = currentFilter === 'all' 
+                ? roomsData 
+                : roomsData.filter(r => r.category === currentFilter);
+
+            grid.innerHTML = filtered.map(room => {
+                const content = room[currentLang];
+                const perNightText = translations.perNight[currentLang];
+                const bookBtnText = translations.bookRoomBtn[currentLang];
+                return `
+                    <article class="bg-cream-50 rounded-3xl p-4 sm:p-5 border-heritage hover:border-copper-500/70 transition-all duration-300 flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="relative islamic-arch-frame overflow-hidden aspect-[4/3.5] bg-umber-900 mb-5">
+                                <img src="${room.image}" alt="${content.name}" onerror="this.src='https://placehold.co/600x525/3B2416/F7F3EB?text=${encodeURIComponent(content.name)}'" class="w-full h-full object-cover img-zoom sepia-[.08]">
+                                <div class="absolute top-4 right-4 bg-cream-100/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-umber-900 border-heritage">
+                                    ${room.size}
+                                </div>
+                            </div>
+
+                            <div class="px-1.5">
+                                <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-copper-600 mb-1">${content.tag}</p>
+                                <h3 class="font-serif text-2xl font-semibold text-umber-900 mb-2.5">${content.name}</h3>
+                                <p class="text-sm text-umber-700 leading-relaxed mb-5">${content.desc}</p>
+
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    ${content.amenities.map(a => `
+                                        <span class="text-[11px] px-2.5 py-1 rounded-md bg-cream-200 text-umber-800 font-medium">${a}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="px-1.5 pt-4 border-heritage-t flex items-center justify-between">
+                            <div>
+                                <span class="font-serif text-2xl font-bold text-umber-900">€ ${room.price}</span>
+                                <span class="text-xs text-umber-700">${perNightText}</span>
+                            </div>
+                            <button onclick="openBookingModal('${room.price}')" class="px-4 sm:px-5 py-2.5 rounded-full bg-umber-800 text-cream-50 text-xs font-semibold uppercase tracking-wider hover:bg-copper-600 transition-colors">
+                                ${bookBtnText}
+                            </button>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        function filterRooms(category) {
+            currentFilter = category;
+            document.querySelectorAll('.room-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-umber-800', 'text-cream-50');
+                btn.classList.add('text-umber-800');
+            });
+            const activeBtn = document.getElementById(`filter-${category}`);
+            activeBtn.classList.add('bg-umber-800', 'text-cream-50');
+            activeBtn.classList.remove('text-umber-800');
+            renderRooms();
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const htmlEl = document.documentElement;
+            htmlEl.lang = lang;
+            htmlEl.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            ['de', 'en', 'ar'].forEach(code => {
+                ['lang-', 'm-lang-'].forEach(prefix => {
+                    const btn = document.getElementById(prefix + code);
+                    if (!btn) return;
+                    if (code === lang) {
+                        btn.classList.add('bg-umber-800', 'text-cream-50');
+                        btn.classList.remove('text-umber-800');
+                    } else {
+                        btn.classList.remove('bg-umber-800', 'text-cream-50');
+                        btn.classList.add('text-umber-800');
+                    }
+                });
+            });
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    el.textContent = translations[key][lang];
+                }
+            });
+
+            renderRooms();
+            recalculateTotal();
+        }
+
+        function toggleMobileDrawer(open) {
+            const drawer = document.getElementById('mobile-drawer');
+            const backdrop = document.getElementById('mobile-backdrop');
+            if (open) {
+                backdrop.classList.remove('hidden');
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+        }
+
+        function handleQuickSearch(e) {
+            e.preventDefault();
+            document.getElementById('modal-checkin').value = document.getElementById('quick-checkin').value;
+            document.getElementById('modal-checkout').value = document.getElementById('quick-checkout').value;
+            openBookingModal();
+        }
+
+        function openBookingModal(preselectedPrice = null) {
+            const modal = document.getElementById('booking-modal');
+            document.getElementById('booking-form').classList.remove('hidden');
+            document.getElementById('booking-confirmation').classList.add('hidden');
+            
+            if (preselectedPrice && ['135', '185', '245'].includes(String(preselectedPrice))) {
+                document.getElementById('modal-room-select').value = String(preselectedPrice);
+            }
+            
+            recalculateTotal();
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function recalculateTotal() {
+            const rate = parseInt(document.getElementById('modal-room-select').value, 10) || 185;
+            const d1 = new Date(document.getElementById('modal-checkin').value);
+            const d2 = new Date(document.getElementById('modal-checkout').value);
+            const hasAirport = document.getElementById('addon-airport').checked;
+
+            let nights = Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
+            if (isNaN(nights) || nights < 1) nights = 1;
+
+            const roomTotal = nights * rate;
+            const extras = hasAirport ? 25 : 0;
+            const grandTotal = roomTotal + extras;
+
+            const nightWord = currentLang === 'de' ? (nights === 1 ? 'Nacht' : 'Nächte') :
+                              currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') :
+                              (nights === 1 ? 'ليلة' : 'ليالٍ');
+
+            let breakdownText = `${nights} ${nightWord} × € ${rate}`;
+            if (extras > 0) breakdownText += ` + Airport Pickup (€ ${extras})`;
+
+            document.getElementById('calc-breakdown').textContent = breakdownText;
+            document.getElementById('calc-subtotal').textContent = `€ ${grandTotal}`;
+            document.getElementById('calc-total').textContent = `€ ${grandTotal}`;
+        }
+
+        function submitBooking(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value.trim();
+            const randomRef = 'DAM-LXR-' + Math.floor(1000 + Math.random() * 9000);
+            
+            document.getElementById('conf-heading').textContent = currentLang === 'ar' 
+                ? `شكراً لك، ${name}!` 
+                : (currentLang === 'en' ? `Thank you, ${name}!` : `Vielen Dank, ${name}!`);
+            document.getElementById('conf-ref').textContent = randomRef;
+
+            document.getElementById('booking-form').classList.add('hidden');
+            document.getElementById('booking-confirmation').classList.remove('hidden');
+        }
+
+        function showToast(msg) {
+            const box = document.getElementById('toast-box');
+            document.getElementById('toast-message').textContent = msg;
+            box.classList.remove('hidden');
+            box.classList.add('flex');
+            setTimeout(() => {
+                box.classList.add('hidden');
+                box.classList.remove('flex');
+            }, 3500);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initDates();
+            renderRooms();
+            recalculateTotal();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
